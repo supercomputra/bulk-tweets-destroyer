@@ -1,4 +1,7 @@
 .Python
 bin/
 include/
+env/
 lib/
+.vscode/
+data.json
