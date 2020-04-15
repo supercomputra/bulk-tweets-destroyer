@@ -31,6 +31,7 @@ def delete(api, date):
 
         # Initialize conter
         deleted_count = 0
+        skipped_count = 0
         failed_count = 0
         total = len(data)
 
@@ -58,6 +59,7 @@ def delete(api, date):
 
             # Continue if given date is before tweet_date
             if date != "" and tweet_date >= parse(date).date():
+                skipped_count += 1
                 continue
 
             try:
@@ -85,11 +87,13 @@ def delete(api, date):
                 failed_count += 1
 
             # Print results
+            print(f"{bcolors.OKBLUE}Skipped: {skipped_count}/{total}{bcolors.ENDC}")
             print(f"{bcolors.OKGREEN}Deleted: {deleted_count}/{total}{bcolors.ENDC}")
             print(f"{bcolors.FAIL}Failed: {failed_count}/{total}{bcolors.ENDC}\n")
         
         # Print final results
         print(f"{bcolors.HEADER}==================== COMPLETED ===================={bcolors.ENDC}\n")
+        print(f"{bcolors.OKBLUE}Skipped: {skipped_count}/{total}{bcolors.ENDC}")
         print(f"{bcolors.OKGREEN}Deleted: {deleted_count}/{total}{bcolors.ENDC}")
         print(f"{bcolors.FAIL}Failed: {failed_count}/{total}{bcolors.ENDC}\n")
         
