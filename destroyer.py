@@ -3,7 +3,6 @@
 import argparse
 import json
 import sys
-import time
 import os
 import twitter
 
@@ -87,6 +86,9 @@ def delete(api, date):
                 failed_count += 1
 
             # Print results
+            count = skipped_count + deleted_count + failed_count
+            progress = float("{:.2f}".format((count/total) * 100))
+            print(f"{bcolors.BOLD}Progress: {progress}%{bcolors.ENDC}")
             print(f"{bcolors.OKBLUE}Skipped: {skipped_count}/{total}{bcolors.ENDC}")
             print(f"{bcolors.OKGREEN}Deleted: {deleted_count}/{total}{bcolors.ENDC}")
             print(f"{bcolors.FAIL}Failed: {failed_count}/{total}{bcolors.ENDC}\n")
