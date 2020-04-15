@@ -24,7 +24,7 @@ class bcolors:
     UNDERLINE = '\033[4m'
 
 def delete(api, date):
-    with open("tweets.json") as file:
+    with open("data.json") as file:
 
         # Load file as JSON data
         data = json.load(file)
