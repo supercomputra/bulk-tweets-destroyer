@@ -28,7 +28,7 @@ Create your own app in twitter https://developer.twitter.com/en/apps/create and 
 - Access token key
 - Access token secret key
 
-### 4. Execute The Script
+### 4. Run The Script
 
 ```
 $ python destroyer.py --date 2020-04-14 -k [CONSUMER_API_KEY] -s [CONSUMER_API_KEY_SECRET] --token-key [ACCESS_TOKEN_KEY] --token-secret [ACCESS_TOKEN_SECRET]
