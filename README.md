@@ -1,4 +1,20 @@
-## Get Started
+# Bulk Tweets Destroyer
+
+## Environment
+### Getting the code
+
+```
+$ git clone git://github.com/ZulwiyozaPutra/bulk-tweets-destroyer.git
+$ cd bulk-tweets-destroyer
+
+```
+
+### Install dependecy
+```
+$ pip install -Ur requirements.txt
+```
+
+## Usage
 
 ### 1. Download Your Twitter Data
 Download your Twitter Data https://twitter.com/settings/your_twitter_data
@@ -14,9 +30,9 @@ Create your own app in twitter https://developer.twitter.com/en/apps/create and 
 - Access token secret key
 
 ### 4. Execute The Script
-In the terminal execute this line
+
 ```
-python destroyer.py --date 2020-04-14 -k [CONSUMER_API_KEY] -s [CONSUMER_API_KEY_SECRET] --token-key [ACCESS_TOKEN_KEY] --token-secret [ACCESS_TOKEN_SECRET]
+$ python destroyer.py --date 2020-04-14 -k [CONSUMER_API_KEY] -s [CONSUMER_API_KEY_SECRET] --token-key [ACCESS_TOKEN_KEY] --token-secret [ACCESS_TOKEN_SECRET]
 ```
 
 #### Arguments
